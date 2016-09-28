@@ -104,6 +104,7 @@ int main(int argc, char* argv[])
             }
             fclose(src);
             free(exec_memory);
+            return 0;
         } else {
             printf("Unable to allocate IfTrue pool.\n");
             exit(-1);
@@ -112,4 +113,5 @@ int main(int argc, char* argv[])
         printf("Unable to open source file.\n");
         exit(-1);
     }
+    return 0;
 }
