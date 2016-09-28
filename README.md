@@ -1,4 +1,4 @@
-! IfTrue Oriented Programming interpreter
+# IfTrue Oriented Programming interpreter
 
 Basically this is a crap language highly inspired from brainfuck.
 
