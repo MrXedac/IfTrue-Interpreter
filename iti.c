@@ -31,6 +31,8 @@ enum LANG_TOKEN read_token(FILE* source)
         return LANG_ENDWHILE;
 
     printf("Parse error: unknown token %s\n", buffer);
+    fclose(source);
+    free(exec_memory);
     exit(-1);
 }
 
@@ -100,6 +102,7 @@ int main(int argc, char* argv[])
                     process_token(tok, src);
             }
             fclose(src);
+            free(exec_memory);
         } else {
             printf("Unable to allocate IfTrue pool.\n");
             exit(-1);
